@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FormulaAI — A Predictive & Recommendation Model </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="curve-rail" aria-hidden="true">
+  <svg viewBox="0 0 1440 4400" preserveAspectRatio="none">
+    <path id="railPath" d="M -50 120 C 300 120 300 300 700 300 C 1100 300 1100 480 1440 480
+      L 1440 1200 C 1100 1200 1100 1380 700 1380 C 300 1380 300 1550 -50 1550
+      L -50 2300 C 300 2300 300 2480 700 2480 C 1100 2480 1100 2650 1440 2650
+      L 1440 3400 C 1100 3400 1100 3580 700 3580 C 300 3580 300 3750 -50 3750" />
+  </svg>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#home">
+    <img src="FormulaAI_logo.png" alt="FormulaAI logo" class="nav__brand-logo">
+  </a>
+  <nav class="nav__links">
+    <a href="#about">About</a>
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#method">Method</a>
+    <a href="#team">Team</a>
+    <a href="#contact" class="nav__cta">Contact us</a>
+  </nav>
+  <div class="nav__translate-wrapper">
+    <label class="nav__translate-label" for="gt-language-select"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g transform="translate(12 12) rotate(0) scale(1 1) translate(-12 -12)"><path fill="#111928" d="M21.056 12h-2a1 1 0 0 0 0 2v2H17.87a3 3 0 0 0 .185-1a3 3 0 0 0-5.598-1.5a1 1 0 1 0 1.732 1a1 1 0 0 1 .866-.5a1 1 0 0 1 0 2a1 1 0 0 0 0 2a1 1 0 1 1 0 2a1 1 0 0 1-.866-.5a1 1 0 1 0-1.732 1a3 3 0 0 0 5.598-1.5a3 3 0 0 0-.185-1h1.185v3a1 1 0 0 0 2 0v-7a1 1 0 1 0 0-2m-11.97-.757a1 1 0 1 0 1.94-.486l-1.757-7.03a2.28 2.28 0 0 0-4.425 0l-1.758 7.03a1 1 0 1 0 1.94.486L5.585 9h2.94ZM6.086 7l.697-2.787a.292.292 0 0 1 .546 0L8.026 7Zm7.97 0h1a1 1 0 0 1 1 1v1a1 1 0 0 0 2 0V8a3.003 3.003 0 0 0-3-3h-1a1 1 0 0 0 0 2m-4 9h-1a1 1 0 0 1-1-1v-1a1 1 0 0 0-2 0v1a3.003 3.003 0 0 0 3 3h1a1 1 0 0 0 0-2"/></g></svg></label>
+    <select id="gt-language-select" class="nav__translate-select" aria-label="Translate page">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="te">Telugu</option>
+      <option value="ta">Tamil</option>
+      <option value="other">Other</option>
+    </select>
+    <div id="google_translate_element" class="google-translate-widget"></div>
+  </div>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+  <section class="hero-media" id="home">
+    <div class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">A predictive analytics project by KARE</p>
+        <h1 class="hero__title">Formula<span class="accent-ai">AI</span></h1>
+        <p class="hero__tagline">Predicting how a pesticide formulation will behave before it ever reaches a lab or a field.</p>
+        <div class="hero__cta">
+          <a href="#how" class="btn btn--primary">See how it works</a>
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <aside class="intro-video" aria-label="Intro video">
+      <video class="intro-video__player" autoplay muted playsinline loop controls>
+        <source src="introvideo/WhatsApp%20Video%202026-08-09%20at%2010.32.34%20PM.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </aside>
+  </section>
+
+  <!-- ABOUT / PROBLEM -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <span class="eyebrow eyebrow--dark">The problem</span>
+      <h2>Good formulas still fail in unpredictable ways.</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__lead">Controlled-release nanopesticides can cut chemical use and slow resistance —
+        but the same carrier particle releases its active ingredient at different speeds depending on
+        size, coating, soil, and weather. There's still no fast, reliable way to know how a formulation
+        will perform before it's built and tested.</p>
+      <ul class="about__facts">
+        <li><strong>No standard framework</strong> exists to predict release behaviour ahead of lab trials.</li>
+        <li><strong>Pest resistance</strong> to conventional chemicals is now the norm, not the exception.</li>
+        <li><strong>Adoption is blocked</strong> by cost, complexity, and a knowledge gap — not just chemistry.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="section__head section__head--onhow">
+      <span class="eyebrow eyebrow--light">How it works</span>
+      <h2>One system, two audiences.</h2>
+    </div>
+    <div class="how__panels">
+      <article class="how__panel how__panel--lab">
+        <div class="how__panel-inner">
+          <div class="how__panel-image">
+            <img src="posters/FormulaAI_Poster_1.png" alt="Poster for researchers">
+          </div>
+          <div>
+            <span class="how__index">Part 1</span>
+            <h3>For researchers</h3>
+            <p>Enter a formulation's parameters — nanoparticle type, particle size, coating, soil pH,
+              moisture, temperature — and the model predicts how it will actually behave.</p>
+            <ul class="how__list">
+              <li>Release rate over time</li>
+              <li>Effectiveness against the target pest</li>
+              <li>Environmental risk score</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="how__panel how__panel--field">
+        <div class="how__panel-inner">
+          <div class="how__panel-image">
+            <img src="posters/FormulaAI_Poster_2.png" alt="Poster for farmers">
+          </div>
+          <div>
+            <span class="how__index">Part 2</span>
+            <h3>For farmers</h3>
+            <p>No chemistry knowledge required. Enter what you already know — crop, pest, soil type,
+              pH, moisture — and get a straightforward recommendation.</p>
+            <ul class="how__list">
+              <li>Matched against the formulation database</li>
+              <li>Ranked by effectiveness, then safety</li>
+              <li>Clear dosage and application guidance</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="section__head">
+      <span class="eyebrow eyebrow--dark">What it predicts</span>
+      <h2>Three outputs, one recommendation.</h2>
+    </div>
+    <div class="features__grid">
+      <div class="feature-card">
+        <span class="feature-card__mark">01</span>
+        <h3>Release rate</h3>
+        <p>Percentage of active ingredient released per day, modelled across a 28-day window.</p>
+        <span class="feature-card__tag">regression · time-series</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__mark">02</span>
+        <h3>Effectiveness</h3>
+        <p>Low, medium, or high performance against the specified target pest.</p>
+        <span class="feature-card__tag">classification</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__mark">03</span>
+        <h3>Environmental risk</h3>
+        <p>A leaching and toxicity estimate, so lower-risk formulations surface first.</p>
+        <span class="feature-card__tag">ordinal scoring</span>
+      </div>
+      <div class="feature-card feature-card--highlight">
+        <span class="feature-card__mark">04</span>
+        <h3>Farmer recommendation</h3>
+        <p>The three predictions above, translated into one plain-language suggestion for the field.</p>
+        <span class="feature-card__tag">rule-based matching</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method" id="method">
+    <div class="section__head">
+      <span class="eyebrow eyebrow--light">Methodology</span>
+      <h2>Built on CRISP-DM.</h2>
+      <p style="color: rgb(3, 127, 51);"><a href="https://app.milanote.com/1WznuF1IQiuV8i?p=HFzjI6Ib6xg" target="_blank" rel="noopener noreferrer">🔗View our project board - Milanote</a></p>
+
+    </div>
+    <ol class="method__steps">
+      <li><span>01</span>Business understanding<small>Define the agri-tech problem and success criteria</small></li>
+      <li><span>02</span>Data understanding<small>Gather formulation and soil data from published research</small></li>
+      <li><span>03</span>Data preparation<small>Clean, encode, and normalise formulation and soil variables</small></li>
+      <li><span>04</span>Modelling<small>CHAID, Rule Induction, and Random Forest for the three predictions</small></li>
+      <li><span>05</span>Evaluation<small>RMSE / R² for regression, accuracy / F1 for classification</small></li>
+      <li><span>06</span>Deployment<small>A simple interface for researchers and farmers alike</small></li>
+    </ol>
+  </section>
+  <!-- TEAM -->
+  <section class="section section--team" id="team">
+    <div class="section__head">
+      <span class="eyebrow eyebrow--dark">Team</span>
+      <h2>Built by the project team behind FormulaAI.</h2>
+    </div>
+    <div class="team__grid">
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">HV</div>
+        <div class="team__details">
+          <h3>Harshavardhan(Team Lead )</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/katta-harshavardhan" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">SM</div>
+        <div class="team__details">
+          <h3>Sriram Manoj </h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/sriram-manoj-kumar-015353315/" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">KP</div>
+        <div class="team__details">
+          <h3>Kollapudi Poorna</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/kollapudi-poorna-chandra-790928351/" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">KJ</div>
+        <div class="team__details">
+          <h3>Kolla Janardhan Rao</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/janardhan-kolla-963009409/" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">KV</div>
+        <div class="team__details">
+          <h3>Koduri Vignesh</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/vignesh-koduri-969b66370/" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">TY</div>
+        <div class="team__details">
+          <h3>Thota Yaswanth</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/Yaswanth" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+      <article class="team__card">
+        <div class="team__avatar" aria-hidden="true">KP</div>
+        <div class="team__details">
+          <h3>Krishna Prasad</h3>
+          <p>B.Tech CSE, Kalasalingam Academy of Research and Education (KARE) — Batch 2024</p>
+          <a href="https://www.linkedin.com/in/thummuri-krishan-prasad-9391b3321" target="_blank" rel="noopener noreferrer" class="team__linkedin">LinkedIn profile</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__text">
+        <span class="eyebrow eyebrow--light">Get in touch</span>
+        <h2>Questions, feedback, or collaboration —<br class="br-desktop"> reach out.</h2>
+        <p>Whether you're a researcher, a fellow student, or just curious about the project,
+          I'd like to hear from you.</p>
+        <p>Mobile: <a href="tel:+7680802918">7680802918</a></p>
+        <p>Email: <a href="mailto:supportformulaai@gmail.com">supportformulaai@gmail.com</a></p>
+        <div class="contact__social">
+          <a href="https://www.facebook.com/share/1DgShXSGtB/" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" class="social-icon"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.3v-2.9h2.3V9.5c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .1 2 .1v2.3h-1.2c-1.2 0-1.5.7-1.5 1.4v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/formal-al-570a94428/" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="social-icon"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm.02 7h-2v11h2v-11zm4 0h-2v11h2v-5.5c0-3 4-3.2 4 0V21h2v-6c0-4-4.5-3.8-6-1.9V10z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/formula.ai_offical?utm_source=qr&igsh=ZzZibng4OXp1dDYz" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" class="social-icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm4.7-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <form class="contact__form" onsubmit="return false;">
+        <label>Name<input type="text" placeholder="Your name" required></label>
+        <label>Email<input type="email" placeholder="you@example.com" required></label>
+        <label>Message<textarea rows="4" placeholder="What's on your mind?" required></textarea></label>
+        <button type="submit" class="btn btn--primary btn--wide">Send message</button>
+      </form>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <span>FormulaAI — a student project at KARE</span>
+  <span>© 2026</span>
+</footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+  <span>↑</span>
+</button>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="script.js"></script>
+</body>
+</html>
