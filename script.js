@@ -10,6 +10,39 @@ document.querySelectorAll('.nav__links a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// App modal popup
+const appModal = document.getElementById('appModal');
+const openModalButtons = document.querySelectorAll('[data-open-modal]');
+const closeModalButtons = document.querySelectorAll('[data-close-modal]');
+
+function openAppModal() {
+  if (!appModal) return;
+  appModal.classList.add('is-open');
+  appModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAppModal() {
+  if (!appModal) return;
+  appModal.classList.remove('is-open');
+  appModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', openAppModal);
+});
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', closeAppModal);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && appModal && appModal.classList.contains('is-open')) {
+    closeAppModal();
+  }
+});
+
 // Scroll reveal
 const revealTargets = document.querySelectorAll(
   '.about__grid, .how__panel, .feature-card, .method__steps li, .team__card, .contact__inner'
