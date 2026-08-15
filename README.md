@@ -1,5 +1,5 @@
 <a href="https://harshavardhan-katta.github.io/FormulaAI">
-  <img src="https://harshavardhan-katta.github.io/FormulaAI/FormulaAI_logo.png" alt="FormulaAI logo" width="350"/>
+  <img src="https://harshavardhan-katta.github.io/FormulaAI/FormulaAI_logo.png" alt="FormulaAI logo" width="250"/>
 </a>
 
 ## 🌐 Our Web Page URL
